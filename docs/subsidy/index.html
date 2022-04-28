@@ -375,7 +375,8 @@
                         <label for="v9_1" class="custom-label">会社名</label><span class="badge badge-danger">必須</span>
                     </div>
                     <div class="col-12 col-md-9">
-                        <input id="v9_1" type="text" class="form-control" name="company"
+                        <div class="alert-msg hidden" id="company_msg">会社名を入力してください</div>
+                        <input id="v9_1" type="text" class="form-control" name="company" 
                             placeholder="法人格（株式会社・有限会社・合同会社など）もお願い致します。">
                     </div>
                 </div>
@@ -384,6 +385,7 @@
                         <label for="v9_2" class="custom-label">担当者氏名</label><span class="badge badge-danger">必須</span>
                     </div>
                     <div class="col-12 col-md-9">
+                        <div class="alert-msg hidden" id="name_msg">担当者氏名を入力してください</div>
                         <input id="v9_2" type="text" class="form-control" name="name" placeholder="山田花子　人事部長">
                     </div>
                 </div>
@@ -392,6 +394,7 @@
                         <label for="v9_3" class="custom-label">メールアドレス</label><span class="badge badge-danger">必須</span>
                     </div>
                     <div class="col-12 col-md-9">
+                        <div class="alert-msg hidden" id="email_msg">メールアドレスを入力してください</div>
                         <input id="v9_3" type="email" class="form-control" name="email">
                     </div>
                 </div>
@@ -400,6 +403,7 @@
                         <label for="v9_4" class="custom-label">本社住所</label><span class="badge badge-danger">必須</span>
                     </div>
                     <div class="col-12 col-md-9">
+                        <div class="alert-msg hidden" id="address_msg">本社住所を入力してください</div>
                         <input id="v9_4" type="text" class="form-control" name="address"
                             placeholder="郵便番号がわかればお願い致します。都道府県だけでも結構です。">
                     </div>
@@ -409,6 +413,7 @@
                         <label for="v9_5" class="custom-label">電話番号</label><span class="badge badge-danger">必須</span>
                     </div>
                     <div class="col-12 col-md-9">
+                        <div class="alert-msg hidden" id="tel_msg">電話番号を入力してください</div>
                         <input id="v9_5" type="tel" class="form-control" name="tel">
                     </div>
                 </div>
@@ -418,6 +423,7 @@
                         <span class="badge badge-danger">必須</span>
                     </div>
                     <div class="col-12">
+                        <div class="alert-msg hidden" id="reference_msg">紹介者・媒体を入力してください</div>
                         <input id="v9_6" type="text" class="form-control" name="reference">
                     </div>
                 </div>
@@ -426,7 +432,7 @@
                         <button type="button" id="prev9" class="btn btn-secondary">戻る</button>
                     </div>
                     <div class="col text-right">
-                        <a href="../finish/" class="btn btn-primary">送信</a>
+                        <a href="../finish/" class="btn btn-primary" id="send_Doc">送信</a>
                     </div>
                 </div>
             </div>
@@ -443,6 +449,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="./../js/subsidy.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="./../js/script.js"></script>
 </body>
 
 </html>
