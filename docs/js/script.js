@@ -14,7 +14,7 @@ const sendDoc = (grant_c_mail,text) => {
 const btn = document.getElementById('send_Doc');
 
 btn.addEventListener('click', function(event) {
-    const grant_c_mail = "support@grant-c.com"
+    const grant_c_mail = "szn0125@gmail.com"
 
     //アンケートの回答1-9までをそれぞれ取得
     const formElements = document.forms.registerForm;
